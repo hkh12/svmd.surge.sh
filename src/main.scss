@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+body {
+  margin: 0;
+}
+
+@import '@material/theme/color-palette';
+
+$mdc-theme-primary: $material-color-green-600;
+$mdc-theme-secondary: $material-color-red-a400;
+
+@import 'svmd/src/sass/Fab';
+@import 'svmd/src/sass/Drawer';
+@import 'svmd/src/sass/TopAppBar';
+@import 'svmd/src/sass/Typography';
+@import 'svmd/src/sass/List';
+@import 'svmd/src/sass/IconButton';
+
+.mdc-drawer {
+  position: fixed;
+  &.mdc-drawer--modal {
+    top: 0;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .mdc-top-app-bar {
+    z-index: $mdc-drawer-z-index + 1;
+  }
+}
+
+article {
+  padding: 1rem;
+  pre {
+    margin: 1rem -1rem;
+    background: #eee;
+    padding: 1rem;
+    // font-size: 18px;
+  }
+}
